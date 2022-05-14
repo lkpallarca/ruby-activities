@@ -1,5 +1,5 @@
 class Confection
-  attr_accessor :type
+  attr_reader :type
 
   def initialize(type)
     @type = type
@@ -11,12 +11,6 @@ class Confection
 end
 
 class Cupcake < Confection
-  attr_reader :type
-
-  def initialize(type)
-    @type = type
-  end
-
   def prepare
     super
     puts "Applying frosting"
@@ -24,9 +18,7 @@ class Cupcake < Confection
 end
 
 class BananaCake < Confection
-  attr_reader :type
-
   def initialize
-    @type = :BananaCake
+    super(:banana_cake)
   end
 end
