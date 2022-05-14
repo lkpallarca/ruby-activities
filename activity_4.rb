@@ -18,7 +18,7 @@ class Cupcake < Confection
   end
 
   def prepare
-    puts "Baking at 350 degrees for 25 minutes"
+    super
     puts "Applying frosting"
   end
 end
