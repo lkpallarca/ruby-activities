@@ -19,7 +19,7 @@ class User
 
   def change_password=(new_password_input)
     puts "Update password successful!"
-    password = new_password_input
+    @password = new_password_input
   end
 
   private
