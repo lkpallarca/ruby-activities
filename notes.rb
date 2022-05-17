@@ -69,3 +69,44 @@ class CTO < Employee
     super
   end
 end
+
+class Transaction
+  attr_reader :amount           #only for instance variables
+
+  @@number_of_transactions = 0  #class variable / not for user input / for class level not instance level
+
+  def initialize(amount)
+    @amount = amount            #instance variable
+    @@number_of_transactions += 1
+  end
+
+  def print_details             #instance method
+    puts "Transaction details."
+    puts "Amount: #{@amount}"
+  end
+
+  def Transaction.total_transactions  #class method / Transaction can also be 'self'
+    @@number_of_transactions
+  end
+end
+
+class Player
+  include Comparable
+
+  attr_reader :name, :rating
+
+  def initialize(name, rating)
+    @name = name
+    @rating = rating
+  end
+
+  def <=>(other)
+    if self.rating < other.rating
+      -1
+    elsif self.rating > other.rating
+      1
+    else
+      0
+    end
+  end
+end
