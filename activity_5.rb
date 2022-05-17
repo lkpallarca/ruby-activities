@@ -17,9 +17,13 @@ class User
    @ip_address = ip_address
   end
 
-  def change_password=(new_password_input)
+  def change_password=(new_password_input) #see different formats of calling this method
     puts "Update password successful!"
     @password = new_password_input
+  end
+
+  def foo(bar)
+    puts bar
   end
 
   private
