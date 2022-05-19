@@ -36,3 +36,5 @@ UPDATE students SET location = 'Bulacan' WHERE id = 1;
 SELECT * FROM students WHERE id = 1;
 
 DELETE FROM students WHERE id = 6;
+
+-- insert into can be shortened
